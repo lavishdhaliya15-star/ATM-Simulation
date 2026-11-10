@@ -23,7 +23,7 @@ int main()
 
       if(enteredpin==pin)
       {
-        prinf("Login Succesfully\n");
+        printf("Login Succesfully\n");
         break;
       }
       attempts++;
@@ -46,7 +46,7 @@ int main()
       switch(choice)
         {
           case 1:
-            checkBalance(balance);
+            CheckBalance(balance);
           break;
 
           case 2:
@@ -66,7 +66,7 @@ int main()
           break;
 
           case 5:
-             printf("Thank You for using the ATM. \n);
+             printf("Thank You for using the ATM. \n");
              printf("Have a nice day \n" );
           break;
 
@@ -97,7 +97,7 @@ float deposit(float balance)
   float amount;
 
   printf("Enter amount to deposit:");
-  scanf("%f, &amount);
+  scanf("%f", &amount);
 
   if(amount <= 0)
     {
@@ -140,27 +140,30 @@ int  changedpin()
 {
   int currentpin;
   int newpin;
+  int pin;
 
   printf("enter you current PIN:");
   scanf("%d", &currentpin);
 
   if(currentpin != pin)
   {
-    printf(Incorrect PIN \n");
+    printf("Incorrect PIN \n");
 
     return pin;
   }
+  else{
   printf("enter your new 4-digit PIN: ");
   scanf("%d", &newpin);
-
-  if(newpin>= 1000 && newpin<=9999
+  }
+  
+  if(newpin>= 1000 && newpin<=9999)
   {
-    printf("PIN changed successfully \n")
+    printf("PIN changed successfully \n");
 
     return newpin;
   }
   else{
-    printf("PIN must contian exaclty 4 digit")
+    printf("PIN must contian exaclty 4 digit");
 
     return pin;
   }
